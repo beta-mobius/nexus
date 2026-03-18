@@ -36,7 +36,7 @@ public class SimpleModuleHotUpdater implements ModuleHotUpdater {
     public HotUpgradeResult hotUpgrade(Path modulePath, UpdateStrategy strategy) {
         try {
             // 1. 加载新模块
-            Module newModule = moduleLoader.loadModule(new FileModuleLocation(modulePath));
+            Module newModule = moduleLoader.loadModule(ModuleLocation.file(modulePath));
             ModuleId newModuleId = newModule.getId();
             String moduleName = newModule.getName();
             
