@@ -18,6 +18,8 @@
         <maven.compiler.target>11</maven.compiler.target>
         <java.version>11</java.version>
         <spring.version>5.3.23</spring.version>
+        <junit.version>5.9.2</junit.version>
+        <mockito.version>4.11.0</mockito.version>
     </properties>
 
     <modules>
@@ -76,11 +78,45 @@
                 <optional>true</optional>
             </dependency>
             
-            <!-- Testing -->
+            <!-- Testing - JUnit 5 -->
             <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.13.2</version>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-params</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            
+            <!-- Mocking framework -->
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-junit-jupiter</artifactId>
+                <version>${mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
+            
+            <!-- Assertions -->
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>3.24.2</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
