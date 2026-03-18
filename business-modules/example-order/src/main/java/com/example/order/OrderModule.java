@@ -1,7 +1,7 @@
 package com.example.order;
 
-import io.modular.framework.kernel.ModuleActivator;
-import io.modular.framework.kernel.ModuleContext;
+import com.mobius.nexus.kernel.ModuleActivator;
+import com.mobius.nexus.kernel.ModuleContext;
 
 /**
  * 订单模块激活器
